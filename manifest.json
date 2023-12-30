@@ -1,7 +1,18 @@
 {
-  "name": "Speed Dial",
-  "version": "1.0.0",
-  "description": "Basic speed dial",
   "manifest_version": 3,
-  "author": "sareacct91"
+
+  "name": "Speed Dial",
+
+  "version": "1.0.0",
+
+  "description": "Basic speed dial",
+
+  "author": "sareacct91",
+
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+
+  "permissions": ["storage"]
+
 }
