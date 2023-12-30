@@ -3,11 +3,16 @@
 }
 
 html {
+  background-color: black;
   color: var(--clr-text);
 }
 
-body {
-  background-color: black;
+h1 {font-size: 3rem;}
+h2 {font-size: 2rem;}
+
+input {
+  border-radius: 10px;
+  height: 3rem;
 }
 
 .wrapper {
@@ -31,6 +36,7 @@ body {
   border: 2px solid;
   padding: 1rem;
   gap: 1rem;
+  cursor: pointer;
 }
 .card > img {
   width: 40%;
@@ -48,4 +54,10 @@ body {
   background-color: black;
   border-style: none;
   border: 2px solid;
+}
+
+#inputForm {
+  gap: 2rem;
+  font-size: 1.5rem;
+
 }
