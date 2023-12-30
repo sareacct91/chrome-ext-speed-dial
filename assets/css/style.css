@@ -1,0 +1,51 @@
+:root {
+  --clr-text: white;
+}
+
+html {
+  color: var(--clr-text);
+}
+
+body {
+  background-color: black;
+}
+
+.wrapper {
+  width: 90%;
+  margin-inline: auto;
+}
+.row {
+  display: flex;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+}
+.align-center {
+  align-items: center;
+}
+
+.card {
+  width: 150px;
+  height: 150px;
+  border: 2px solid;
+  padding: 1rem;
+  gap: 1rem;
+}
+.card > img {
+  width: 40%;
+  height: auto;
+}
+.card > a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--clr-text);
+}
+
+#addBtn {
+  font-size: 3rem;
+  color: var(--clr-text);
+  background-color: black;
+  border-style: none;
+  border: 2px solid;
+}
