@@ -36,16 +36,14 @@ input {
   border: 2px solid;
   padding: 1rem;
   gap: 1rem;
-  cursor: pointer;
-}
-.card > img {
-  width: 40%;
-  height: auto;
-}
-.card > a {
   font-size: 1.5rem;
   text-decoration: none;
   color: var(--clr-text);
+}
+
+.card img {
+  width: 40%;
+  height: auto;
 }
 
 #addBtn {

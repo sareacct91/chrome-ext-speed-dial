@@ -26,9 +26,11 @@ document.getElementById('inputForm').addEventListener('submit', (evt) => {
 
   // Create the li element and insert to the page
   const htmlStr = `
-    <li class="card col align-center">
-    <img src='https://icons.duckduckgo.com/ip3/${favIcoUrl}.ico' alt="" />
-      <a href="${url}" target="_blank">${name}</a>
+    <li>
+      <a href="${url}" target="_blank" class="card col align-center">
+        <img src='https://icons.duckduckgo.com/ip3/${favIcoUrl}.ico' alt="" />
+        <span>${name}</span>
+      </a>
     </li>
     `;
   linksListEl.insertAdjacentHTML('beforeend', htmlStr);
