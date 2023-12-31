@@ -23,7 +23,7 @@ document.getElementById('inputForm').addEventListener('submit', (evt) => {
   urlInputEl.value = '';
 
   // Get the base url of the website
-  const favIcoUrl = url.match(/[^https:/].+.com/i);
+  const favIcoUrl = url.match(/(?:https:\/\/)(.*.com)/i);
 
   // Create the li element and insert to the page
   const htmlStr = `
