@@ -5,7 +5,7 @@ const linksListEl = document.getElementById('linksList');
 const nameInputEl = document.getElementById('nameInput');
 const urlInputEl = document.getElementById('urlInput');
 
-
+// Form submission handler to add a shortcut to the list
 document.getElementById('inputForm').addEventListener('submit', (evt) => {
   evt.preventDefault();
 
