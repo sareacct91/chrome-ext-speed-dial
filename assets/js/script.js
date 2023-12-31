@@ -67,7 +67,8 @@ addEventListener('DOMContentLoaded', () => {
     localStorage.setItem("shortcuts", linksListEl.innerHTML);
   })
 
-  // Draging and Drop API
+  //#region Draging and Drop API
+
   linksListEl.addEventListener('dragstart', (evt) => {
     // Store the dragged element
     evt.dataTransfer.setData('text/plain', evt.target.parentElement.id);
@@ -117,4 +118,6 @@ addEventListener('DOMContentLoaded', () => {
     // Save the list to localStorage
     localStorage.setItem("shortcuts", linksListEl.innerHTML);
   });
+
+  //#endregion Drag and Drop API
 })
