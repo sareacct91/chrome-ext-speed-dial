@@ -15,6 +15,17 @@ input {
   height: 3rem;
 }
 
+li {
+  position: relative;
+}
+
+button {
+  color: var(--clr-text);
+  background-color: black;
+  border-style: none;
+  line-height: 0;
+}
+
 .wrapper {
   width: 90%;
   margin-inline: auto;
@@ -29,6 +40,16 @@ input {
 .align-center {
   align-items: center;
 }
+.d-relative {
+  position: relative;
+}
+.dragging{
+  opacity: 0.2;
+}
+.dragover {
+  background-color: #158da9; /* Highlight background color */
+  border: 2px solid #333; /* Highlight border */
+}
 
 .card {
   width: 150px;
@@ -40,17 +61,27 @@ input {
   text-decoration: none;
   color: var(--clr-text);
 }
-
 .card img {
   width: 40%;
   height: auto;
 }
 
+.delete-btn {
+  --size: 25px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: var(--size);
+  width: var(--size);
+  font-size: 1.5rem;
+  border: 2px solid;
+}
+
 #addBtn {
+  --size: 3rem;
+  width: var(--size);
+  height: var(--size);
   font-size: 3rem;
-  color: var(--clr-text);
-  background-color: black;
-  border-style: none;
   border: 2px solid;
 }
 
