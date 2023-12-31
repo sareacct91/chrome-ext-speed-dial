@@ -23,7 +23,7 @@ document.getElementById('inputForm').addEventListener('submit', (evt) => {
   urlInputEl.value = '';
 
   // Get the base url of the website
-  const favIcoUrl = url.match(/(?:https:\/\/)?(.*.com)/i);
+  const favIcoUrl = url.match(/(?:https:\/\/)?(.*.com)?(.*.org)?/i);
   console.log(favIcoUrl);
 
   // Create the li element and insert to the page
@@ -31,7 +31,7 @@ document.getElementById('inputForm').addEventListener('submit', (evt) => {
     <li id="${name}" draggable="true">
       <button class="delete-btn" draggable="false">x</button>
       <a href="${url}" class="card col align-center">
-        <img src='https://icons.duckduckgo.com/ip3/${favIcoUrl[1] || favIcoUrl}.ico' alt="" draggable="false"/>
+        <img src='https://icons.duckduckgo.com/ip3/${favIcoUrl[1] || favIcoUrl[2]}.ico' alt="" draggable="false"/>
         ${name}
       </a>
     </li>`;
