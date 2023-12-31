@@ -11,7 +11,7 @@ document.getElementById('inputForm').addEventListener('submit', (evt) => {
 
   // Get user input
   const name = nameInputEl.value;
-  const url = urlInputEl.value;
+  let url = urlInputEl.value;
 
   // If not user inputs don't do anything
   if (!name || !url) {
@@ -23,7 +23,14 @@ document.getElementById('inputForm').addEventListener('submit', (evt) => {
   urlInputEl.value = '';
 
   // Get the base url of the website
-  const favIcoUrl = url.match(/(?:https:\/\/)?(.*.com)?(.*.org)?/i);
+  const favIcoUrl = url.match(/(?:https:\/\/)?(.*.com|.*.org)/i);
+
+  if (!url.startsWith('http')) {
+    url = `https://${url}`;
+  }
+
+  // Test
+  console.log(name, url);
   console.log(favIcoUrl);
 
   // Create the li element and insert to the page
@@ -31,7 +38,7 @@ document.getElementById('inputForm').addEventListener('submit', (evt) => {
     <li id="${name}" draggable="true">
       <button class="delete-btn" draggable="false">x</button>
       <a href="${url}" class="card col align-center">
-        <img src='https://icons.duckduckgo.com/ip3/${favIcoUrl[1] || favIcoUrl[2]}.ico' alt="" draggable="false"/>
+        <img src='https://icons.duckduckgo.com/ip3/${favIcoUrl[1]}.ico' alt="" draggable="false"/>
         ${name}
       </a>
     </li>`;
@@ -106,5 +113,8 @@ addEventListener('DOMContentLoaded', () => {
   // Delete the original element
   linksListEl.addEventListener('dragend', (evt) => {
     evt.target.classList.remove('dragging');
+
+    // Save the list to localStorage
+    localStorage.setItem("shortcuts", linksListEl.innerHTML);
   });
 })
